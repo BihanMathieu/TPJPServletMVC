@@ -79,10 +79,12 @@ input[type="submit"]:hover {
 <body>
 	<h1>Entrez votre département</h1>
 	<form action="ShowDept" method="POST">
-		<label for="departement">Département :</label> <input type="text"
-			id="departement" name="departement"> <br> <input
-			type="submit" value="Envoyer">
+		<label for="departement">Département :</label> 
+		<input type="text" id="departement" name="departement"> <br> 
+		<input type="submit" value="Envoyer">
 	</form>
+	<a href="save-dept.jsp">Texte ou contenu du lien</a>
+	<a href="FindallDepartementServlet">Texte ou contenu du lien</a>
 
 </body>
 </html>

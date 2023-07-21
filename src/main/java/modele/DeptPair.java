@@ -28,10 +28,5 @@ public class DeptPair {
 	public String getDeptName() {
 		return deptName;
 	}
-
-
-
-	
-	
 	
 }
