@@ -29,50 +29,24 @@ public class DepartementServiceImpl implements DepartementService {
         departementDAO.saveDepartement(departement);
     }
 
+    @Override
+    public void updateDepartement(Departement departement, String newDeptNum, String newDeptName) {
+       departement.setDeptName(newDeptName);
+       departement.setDeptNum(newDeptNum);
+       departementDAO.updateDepartement(departement);
+    }
 
-	@Override
-	public void deleteDepartement(String departement) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
-	public void updateDepartement(Long num, String newDeptNum, String newDeptName) {
-		// TODO Auto-generated method stub
-		
-	}
 
-//    @Override
-//    public void updateDepartement(Long num, String newDeptNum, String newDeptName) {
-//        Departement existingDepartement = departementDAO.findDepartementByNum(num);
-//        if (existingDepartement != null) {
-//
-//            
-//            if (!num.equals(newDeptNum)) {
-//                Departement deptWithNewNum = departementDAO.findDepartementByNum(newDeptNum);
-//                if (deptWithNewNum != null) {
-//                    throw new IllegalArgumentException("Un département avec le numéro " + newDeptNum + " existe déjà.");
-//                }
-//            }
-//
-//            
-//            existingDepartement.setDeptNum(newDeptNum);
-//            existingDepartement.setDeptName(newDeptName);
-//
-//            departementDAO.updateDepartement(existingDepartement);
-//        } else {
-//            throw new IllegalArgumentException("Le département avec le numéro " + num + " n'existe pas.");
-//        }
-//    }
 
-//    @Override
-//    public void deleteDepartement(String deptNum) {
-//        Departement existingDepartement = departementDAO.findDepartementByNum(deptNum);
-//        if (existingDepartement != null) {
-//            departementDAO.deleteDepartement(existingDepartement);
-//        } else {
-//
-//            throw new IllegalArgumentException("Le département avec le numéro " + deptNum + " n'existe pas.");
-//        }
-//    }
+    @Override
+    public void deleteDepartement(Long id) {
+
+
+    	
+            departementDAO.deleteDepartement(id);
+
+
+            
+    }
 }

@@ -21,7 +21,7 @@
                 <td><%= departement.getDeptName() %></td>
                 <td>
                     <a href="update-dept.jsp?id=<%= departement.getId() %>">Update</a>
-                    <a href="DeleteDepartementServlet?deptNum=<%= departement.getDeptNum() %>">Supprimer</a>
+                    <a href="DeleteDepartementServlet?id=<%= departement.getId() %>">Supprimer</a>
                 </td>
             </tr>
         <% } %>

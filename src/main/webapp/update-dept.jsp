@@ -10,6 +10,7 @@
 
 	 <h1>Update departements</h1>
     <form action="UpdateDepartementServlet" method="post">
+    <input type="hidden" id="id" name="id" value="${param.id}">
         <label for="deptNum">Numéro de département:</label>
         <input type="text" id="deptNum" name="deptNum" required>
         <br>

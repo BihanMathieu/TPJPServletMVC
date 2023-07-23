@@ -52,11 +52,11 @@ public class DepartementDAOImpl implements DepartementDAO {
     }
 
     @Override
-    public void deleteDepartement(Departement departement) {
+    public void deleteDepartement(Long id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
-        Departement mergedDepartement = entityManager.merge(departement);
-        entityManager.remove(mergedDepartement);
+        Departement departement = entityManager.find(Departement.class, id);
+        entityManager.remove(departement);
         entityManager.getTransaction().commit();
         entityManager.close();
     }
@@ -64,4 +64,5 @@ public class DepartementDAOImpl implements DepartementDAO {
     public void destroy() {
         entityManagerFactory.close();
     }
+
 }
